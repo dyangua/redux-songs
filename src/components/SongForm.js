@@ -29,6 +29,8 @@ class SongForm extends React.Component {
 
   render() {
     const { name, artist } = this.state;
+    const validate = name === "" && artist === "";
+
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="row">
@@ -53,7 +55,9 @@ class SongForm extends React.Component {
             />
           </div>
           <div className="four columns">
-            <button type="submit">Enviar</button>
+            <button disabled={validate} type="submit">
+              Enviar
+            </button>
           </div>
         </div>
       </form>
@@ -62,4 +66,5 @@ class SongForm extends React.Component {
 }
 
 const { addSong } = Actions;
+
 export default connect()(SongForm);

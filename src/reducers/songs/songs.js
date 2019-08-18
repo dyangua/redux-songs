@@ -8,6 +8,7 @@ export const songs = (album = [], action) => {
     case REMOVE_SONG: {
       return album.filter(song => song.name !== action.payload);
     }
+
     default:
       return album;
   }

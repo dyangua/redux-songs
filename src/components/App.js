@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import SongForm from "./SongForm";
 import List from "./List";
+import Detail from "./Detail";
 
 function App() {
   return (
@@ -9,7 +10,10 @@ function App() {
       <div className="container">
         <h1>Songs React Redux</h1>
         <SongForm />
-        <List />
+        <div className="row">
+          <List />
+          <Detail />
+        </div>
       </div>
     </div>
   );
