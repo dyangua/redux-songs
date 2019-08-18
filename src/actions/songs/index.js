@@ -1,6 +1,7 @@
-import { addSong, deleteSong } from "./songs";
+import { addSong, deleteSong, selectedSong } from "./songs";
 
 export default {
   addSong,
-  deleteSong
+  deleteSong,
+  selectedSong
 };

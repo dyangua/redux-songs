@@ -1,4 +1,4 @@
-import { ADD_SONG, REMOVE_SONG } from "./types";
+import { ADD_SONG, REMOVE_SONG, SELECTED_SONG } from "./types";
 
 export const addSong = song => {
   return {
@@ -13,5 +13,12 @@ export const deleteSong = name => {
   return {
     type: REMOVE_SONG,
     payload: name
+  };
+};
+
+export const selectedSong = song => {
+  return {
+    type: SELECTED_SONG,
+    payload: song
   };
 };
